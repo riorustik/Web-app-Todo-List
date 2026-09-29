@@ -77,6 +77,7 @@ class Todo {
         const items = this.state.filteredItems ?? this.state.items
 
         this.listElement.innerHTML = items.map(({id, title, isChecked}) => `
+            
              <li class="todo__item todo-item"
             data-js-todo-item>
             <input class="todo-item__checkbox"
@@ -207,12 +208,12 @@ class Todo {
     onClick = ({target}) => {
         if (target.matches(this.selectors.itemDeleteButton)) {
             const itemElement = target.closest(this.selectors.item)
-            const itemCheclboxElement = itemElement.querySelector(this.selectors.itemCheckBox)
+            const itemCheckboxElement = itemElement.querySelector(this.selectors.itemCheckBox)
 
             itemElement.classList.add(this.stateClasses.isDisappearing)
 
             setTimeout(() => {
-                this.deleteItem(itemCheclboxElement.id)
+                this.deleteItem(itemCheckboxElement.id)
             })
         }
     }
