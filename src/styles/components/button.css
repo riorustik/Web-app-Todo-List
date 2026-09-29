@@ -2,7 +2,7 @@
     display: inline-block;
     align-items: center;
     height: var(--input-height);
-    padding: 12px;
+    padding: 0 12px;
     color: var(--color-gray-1);
     background-color: var(--color-dark-2);
     border-radius: var(--border-radius);
